@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable = "true">
+	<Manager className="org.apache.catalina.session.PersistentManager">
+		<Store className="org.apache.catalina.session.FileStore"/>
+	</Manager>
+
+	<Resource 
+			name="jdbc/esql" 
+			auth="Container"
+			type="javax.sql.DataSource"
+			driverClassName="org.postgresql.Driver"
+			url="jdbc:postgresql://localhost:5432/scugo"
+			username="LMD" 
+			password="1234"
+			maxActive="100"
+			maxIdle="30"
+			maxWait="10000"
+			validationQuery="select now()"
+	/>
+</Context>
