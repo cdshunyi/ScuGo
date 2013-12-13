@@ -117,7 +117,7 @@
 				<div class="top-nav nav-collapse">
 					<ul class="nav">
 						<li>
-							<a href="#">前台首页<i class="icon icon-white icon-extlink"></i></a>
+							<a href="/ScuGo/index" target="_blank">前台首页<i class="icon icon-white icon-extlink"></i></a>
 						</li>
 					</ul>
 				</div>

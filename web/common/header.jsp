@@ -58,16 +58,16 @@
 					</li>
 					<li class="fore2 ld"><a href="trade?m=order" rel="nofollow"><strong>我的订单</strong></a>
 					</li>
-					<li class="fore2 ld"><a href="logout" rel="nofollow"><strong>注销</strong></a>
+					<li class="fore2 ld"><a href="user?m=logout" rel="nofollow"><strong>注销</strong></a>
 					</li>
 
 				</c:if>
 
 				<c:if test="${is_login != true}">
 					<li class="fore1" id="loginbar">您好，欢迎来到四川大学购物平台</li>
-					<li class="fore2 ld"><a href="login" rel="nofollow"><strong>登录</strong></a>
+					<li class="fore2 ld"><a href="user?m=login" rel="nofollow"><strong>登录</strong></a>
 					</li>
-					<li class="fore3 ld"><a href="register" rel="nofollow"><strong>注册</strong></a>
+					<li class="fore3 ld"><a href="user?m=register" rel="nofollow"><strong>注册</strong></a>
 					</li>
 				</c:if>
 			</ul>
@@ -113,7 +113,7 @@
 							<ul class="fore1" style="border: none;">
 							
 								<c:if test="${is_login == true}">
-									<li><a href="user?m=info">账户资料</a></li>
+									<li><a href="user?m=profile&id=${user_data.usid}">账户资料</a></li>
 									<li><a href="trade?m=invoice">我的账单</a></li>
 									<c:if test="${user_data.isseller == 1}">
 										<li><a href="shop">店铺管理</a></li>
@@ -123,8 +123,8 @@
 									</c:if>
 								</c:if>
 								<c:if test="${is_login != true}">
-									<li><a href="login">登录</a></li>
-									<li><a href="register">注册</a></li>
+									<li><a href="user?m=login">登录</a></li>
+									<li><a href="user?m=register">注册</a></li>
 								</c:if>
 
 							</ul>
@@ -137,7 +137,7 @@
 				<dl>
 					<dt class="ld" onClick="window.location.href='trade-cart'">
 						<span class="shopping"><span id="shopping-amount">0</span></span>
-						<a href="trade-cart" id="settleup-url">购物车</a> <b></b>
+						<a href="trade?m=cart" id="settleup-url">购物车</a> <b></b>
 					</dt>
 				</dl>
 			</div>

@@ -20,17 +20,18 @@
 					</div>
 				</c:if>
 				
-				<form action="login" method="post" class="form-horizontal">
+				<form action="user?m=login" method="post" class="form-horizontal">
 					<div class="control-group">
 						<label class="control-label">用户名 :</label>
 						<div class="controls">
-							<input type="text" name="login_name" class="span4" placeholder="用户名">
+							<input type="text" name="username" value="${tpl_login_attr_username}" 
+								class="span4" placeholder="用户名">
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label">密码 :</label>
 						<div class="controls">
-							<input type="password" name="login_password" class="span4" placeholder="密码">
+							<input type="password" name="password" class="span4" placeholder="密码">
 						</div>
 					</div>
 					

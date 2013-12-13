@@ -16,7 +16,7 @@ public class UserDataDaoImpl extends BaseDao implements UserDataDao, PostgreSQL{
 
 	@Override
 	public UserData getUserDataByUsername(String username) throws Exception {
-		String sql = "SELECT * FROM scugo_user_data WHERE username = '?'";
+		String sql = "SELECT * FROM scugo_user_data WHERE username = ?";
 		return esql.query(UserData.class, sql, username);
 	}
 
@@ -24,5 +24,12 @@ public class UserDataDaoImpl extends BaseDao implements UserDataDao, PostgreSQL{
 	public List<UserData> getAllUsersData() throws Exception {
 		String sql = "SELECT * FROM scugo_user_data";
 		return esql.list(UserData.class, sql);
+	}
+
+	@Override
+	public int addUserData(UserData uData) throws Exception {
+		String sql = "INSERT INTO scugo_user_data(type, username, password, salt, timereg, email, isseller) VALUES (?, ?, ?, ?, ?, ?, ?);";
+		return esql.update(sql, uData.getType(), uData.getUsername(), uData.getPassword(), uData.getSalt(),
+				uData.getTimereg(), uData.getEmail(), uData.getIsseller());
 	}
 }
