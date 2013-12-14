@@ -84,7 +84,7 @@
 	<script src="js/charisma.js"></script>
 	
 	<!-- 额外JS文件 -->
-	<c:forEach items="${tpl_include_js}" var='item'>
+	<c:forEach items="${tpl_include_js}" var="item">
 		<script src="js/${item}"></script>
 	</c:forEach>
 	

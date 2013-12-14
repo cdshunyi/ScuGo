@@ -12,4 +12,10 @@
 		<function-class>com.action.library.SystemUtils</function-class>
 		<function-signature>java.util.Date timestampToDate(int)</function-signature>
 	</function>
+	<function>
+		<name>randomColorStyle</name>
+		<function-class>com.action.library.SystemUtils</function-class>
+		<function-signature>java.lang.String randomColorStyle()</function-signature>
+	</function>
+	
 </taglib>

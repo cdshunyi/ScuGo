@@ -495,7 +495,7 @@ a:active {
 	width: 64px;
 	height: 12px;
 	background-image:
-		url(http://misc.360buyimg.com/lib/skin/2012/i/20120112B.png);
+		url(../img/20120112B.png);
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
@@ -528,7 +528,7 @@ a:active {
 	width: 21px;
 	height: 21px;
 	background-image:
-		url(http://misc.360buyimg.com/lib/skin/2012/i/20120112B.png);
+		url(../img/20120112B.png);
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
@@ -545,7 +545,7 @@ a:active {
 	width: 60px;
 	height: 60px;
 	background-image:
-		url(http://misc.360buyimg.com/lib/skin/2012/i/20111230A.png);
+		url(../img/20111230A.png);
 	background-repeat: no-repeat;
 }
 

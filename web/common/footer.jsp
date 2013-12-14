@@ -10,7 +10,7 @@
 			<a href="#">友情链接</a>
 		</div>
 		<div class="copyright">
-			&nbsp;Copyright&nbsp;©&nbsp;2013&nbsp;SCUGO 四川大学购物平台&nbsp;版权所有
+			 Copyright © 2013 ScuGo&nbsp;&nbsp;&nbsp;四川大学购物平台 版权所有
 			<br>
 		</div>
 		<div class="authentication"></div>

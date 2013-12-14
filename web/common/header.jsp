@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
-
 <%
 // tpl_attr_action 操作名英文
 // tpl_attr_actstr 操作名中文
@@ -10,7 +9,6 @@
 // tpl_include_js  JS文件数组
 // tpl_script_js   页面JS代码
 %>
-
 <!DOCTYPE html>
 <html>
 <head>

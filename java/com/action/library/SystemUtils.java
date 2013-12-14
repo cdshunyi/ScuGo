@@ -1,6 +1,7 @@
 package com.action.library;
 
 import java.security.MessageDigest;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import java.util.regex.Matcher;
@@ -12,6 +13,17 @@ public class SystemUtils {
 		long timel = (long) time * 1000;
 		Date date = new Date(timel);
 		return date;
+	}
+	
+	public static String randomColorStyle() {
+		ArrayList<String> colors = new ArrayList<String>();
+		colors.add("bg_lb");
+		colors.add("bg_lg");
+		colors.add("bg_ly");
+		colors.add("bg_lo");
+		colors.add("bg_ls");
+		int n = (int)Math.round(Math.random()*(4-1)+0); 
+		return colors.get(n);
 	}
 
 	public final static String MD5(String s) {
