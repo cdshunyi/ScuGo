@@ -116,14 +116,39 @@ public class UserDataAction {
 		}
 	}
 	
-	public static boolean registerUserData(UserData uData) {
+	public static int registUserData(UserData uData) {
+		DaoManager dManager = DaoManager.getInstance();
+		UserDataDao udDao = dManager.getDao(UserDataDao.class);
+		int maxId = 0;
+		
+		try
+		{
+			dManager.begin();
+			udDao.addUserData(uData);
+			maxId = udDao.getMaxUsId();
+			dManager.commit();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			dManager.end();
+		}
+		return maxId;
+	}
+	
+	public static boolean saveUserData(UserData uData) {
+		
 		DaoManager dManager = DaoManager.getInstance();
 		UserDataDao udDao = dManager.getDao(UserDataDao.class);
 		
 		try
 		{
 			dManager.begin();
-			udDao.addUserData(uData);
+			udDao.saveUserData(uData);
 			dManager.commit();
 		}
 		catch (Exception e)

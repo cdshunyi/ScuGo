@@ -38,6 +38,11 @@
 		<servlet-name>HomeUser</servlet-name>
 		<servlet-class>com.controller.library.HomeUser</servlet-class>
 	</servlet>
+  <servlet>
+    <servlet-name>HomeGoods</servlet-name>
+    <servlet-class>com.controller.library.HomeGoods</servlet-class>
+  </servlet>
+
 
 	<servlet-mapping>
 		<servlet-name>AdminUser</servlet-name>
@@ -51,6 +56,10 @@
 		<servlet-name>HomeUser</servlet-name>
 		<url-pattern>/user</url-pattern>
 	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HomeGoods</servlet-name>
+    <url-pattern>/goods</url-pattern>
+  </servlet-mapping>
 
 	<welcome-file-list>
 		<welcome-file>index</welcome-file>

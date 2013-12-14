@@ -32,4 +32,18 @@ public class UserDataDaoImpl extends BaseDao implements UserDataDao, PostgreSQL{
 		return esql.update(sql, uData.getType(), uData.getUsername(), uData.getPassword(), uData.getSalt(),
 				uData.getTimereg(), uData.getEmail(), uData.getIsseller());
 	}
+
+	@Override
+	public int getMaxUsId() throws Exception {
+		String sql = "SELECT max(usid) FROM scugo_user_data";
+		return esql.query(Integer.class, sql);
+	}
+
+	@Override
+	public int saveUserData(UserData uData) throws Exception {
+		String sql = "UPDATE scugo_user_data SET type=?, username=?, password=?, salt=?, timereg=?, email=?, isseller=? " +
+				"WHERE usid=?";
+		return esql.update(sql, uData.getType(), uData.getUsername(), uData.getPassword(), uData.getSalt(),
+				uData.getTimereg(), uData.getEmail(), uData.getIsseller(), uData.getUsid());
+	}
 }

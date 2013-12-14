@@ -9,4 +9,6 @@ public interface UserDataDao {
 	public UserData getUserDataByUsername(String username) throws Exception;
 	public List<UserData> getAllUsersData() throws Exception;
 	public int addUserData(UserData uData) throws Exception;
+	public int getMaxUsId() throws Exception;
+	public int saveUserData(UserData uData) throws Exception;
 }

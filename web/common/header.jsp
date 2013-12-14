@@ -113,7 +113,7 @@
 							<ul class="fore1" style="border: none;">
 							
 								<c:if test="${is_login == true}">
-									<li><a href="user?m=profile&id=${user_data.usid}">账户资料</a></li>
+									<li><a href="user?m=profile">账户资料</a></li>
 									<li><a href="trade?m=invoice">我的账单</a></li>
 									<c:if test="${user_data.isseller == 1}">
 										<li><a href="shop">店铺管理</a></li>
